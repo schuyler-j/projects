@@ -5,8 +5,6 @@ using namespace std;
 
 int main(){
 
-cout << "Hello";
-
 int count = 0;
 int letter = 12;
 char name[] = "Jay Schuyler";
