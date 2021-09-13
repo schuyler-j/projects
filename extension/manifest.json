@@ -1,0 +1,28 @@
+{
+"name": "contextu",
+"version": "1.0",
+"description": "testing",
+"manifest_version": 2,
+"background": 
+    {
+    "persistent": true,
+    "scripts": ["content.js"]
+    }
+,
+"permissions": [
+    "contextMenus",
+    "storage"
+],
+
+    "icons": 
+    {
+        "16": "kali.png",
+        "19": "kali.png",
+        "20": "kali.png",
+        "32": "kali.png",
+        "38": "kali.png",
+        "40": "kali.png"
+    }
+
+
+}
