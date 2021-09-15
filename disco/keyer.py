@@ -12,6 +12,8 @@ import re
 search = ""
 
 
+victim = input("Type the discord name of the individual you wish to annoy and hit Enter! : ")
+
     #keyboard.send("ctrl+v, enter")
 
 j = []
@@ -53,7 +55,7 @@ while a == 1:
         search = data[num]
         win32clipboard.OpenClipboard()
         win32clipboard.EmptyClipboard()
-        win32clipboard.SetClipboardText("@skazz")
+        win32clipboard.SetClipboardText(victim)
         win32clipboard.CloseClipboard()
 
         keyboard.send("ctrl+v, space")
