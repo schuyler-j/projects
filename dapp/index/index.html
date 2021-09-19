@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wellford</title>
+    <meta
+      name="nft"
+      content="The gallery."
+    />
+    <meta name="rogermeyrs" content="etchasketch" />
+    <link rel="stylesheet" href="style.css" />
+
+
+  </head>
+  <body>
+
+    <div id="app">
+
+      <img :src="logo" :alt="firstName"/>
+      <h1>{{firstName}}</h1>
+      <h3>uploading your personality to the web</h3>
+
+      <button :onclick="getUser">upload</button>
+
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
