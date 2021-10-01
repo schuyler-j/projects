@@ -4,18 +4,18 @@ const app = Vue.createApp({
 
         return{
             firstName: 'Wellford',
+            upload: 'uploading your personality to the web, one bit at a time...',
             logo: 'logo2021 copy.png'
         }
 
     },
     methods: {
         async getUser() {
-            const res = await fetch('https://randomuser.me/api')
-            const { results } = await res.json()
 
-
-            this.firstName = results[0].name.first
-
+            this.upload = 'uploading...';
+            for (var i = 0; i < 10; i++){
+                this.upload = this.upload + 'uploading...';
+            }
         },
 
     }
