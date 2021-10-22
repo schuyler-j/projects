@@ -26,9 +26,6 @@ def main():
     #size = (nWidth, nHeight)
     size = (120, 120)
 
-
-
-
     #time.sleep(0.2)
     fileImg = 'img.png'
     #fileImg = 'imgROT.png'
