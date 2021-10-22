@@ -76,10 +76,10 @@ def main():
             #(85, 65, 55, 45
             #(85, 70, 35, 20)
             #(80, 65, 45, 25)
-            t = (total*0.80)
-            hm = (total*0.65)
-            m = (total*0.45)
-            l = (total*0.15)
+            t = (total*0.85)
+            hm =(total*0.55)
+            m = (total*0.35)
+            l = (total*0.25)
 
             chk = total-(a+b+c)
 
