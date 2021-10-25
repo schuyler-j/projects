@@ -1,4 +1,6 @@
+import os
 import time
+import glob
 import math
 from math import pi
 import re
@@ -160,18 +162,49 @@ class image():
         self.main()
     
     def rename(self):
-        pass
+
+
+        fileList = glob.glob("./*")
+        latestFile = max(fileList, key=os.path.getctime)
+        latestFile = latestFile.split('\\')
+        rFile = latestFile[1]
+
+        command = ("rename " + "\"" + "./" + rFile + "\"" + " img.png")
+        os.system(command)
+        print("finished.")
+        self.rotate()
 
 
     def getFile(self):
-        pass
+        try:
+            os.system("del img.png")
+        except:
+            print("file not found")
+            pass
+
+        cPath = os.path.join("c:", "/Users/Jay/AppData/Local/Packages/MicrosoftWindows.Client.CBS_cw5n1h2txyewy/TempState/ScreenClip")
+        fileList = glob.glob(cPath + "/*")
+        latestFile = max(fileList, key=os.path.getmtime)
+        dPath = ('./')
+
+        latestFile = latestFile.split('\\')
+        mFile = latestFile[1]
+
+        print("moving and renaming file...")
+
+        command = ("cp " + "\"" + cPath + "/" + mFile + "\"" + " " + dPath)
+        os.system(command)
+        self.rename()
+
+
+
 
 
 if __name__ == "__main__":
 
     a = image()
-    a.rotate()
 
+    a.getFile()
 
 
 
