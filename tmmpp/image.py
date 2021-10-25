@@ -8,6 +8,15 @@ import sys
 
 def main():
 
+    #term colours
+    OKBLUE = '\033[94m'
+    OKRED = '\033[93m'
+    OKGREEN = '\033[92m'
+    OKBLACK = '\033[1m'
+
+    COLOR_ONE = ''
+    COLOR_TWO = ''
+
 
 
         #LEGACY
@@ -42,7 +51,7 @@ def main():
 
     low  = "@"
     med  = ","
-    high = "-"
+    high = " "
     low_med = "o"
     high_med = "*"
 
@@ -73,10 +82,10 @@ def main():
             #(85, 65, 55, 45
             #(85, 70, 35, 20)
             #(80, 65, 45, 25)
-            t = (total*0.85)
-            hm =(total*0.55)
-            m = (total*0.35)
-            l = (total*0.25)
+            t = (total*0.70)
+            hm =(total*0.60)
+            m = (total*0.30)
+            l = (total*0.20)
 
             chk = total-(a+b+c)
 
@@ -89,14 +98,28 @@ def main():
                 payload = low
             elif chk < t and chk > hm:
                 payload = high_med
+
             elif chk < m and chk > l:
                 payload = low_med
             with open("picture.txt", "a") as fileHop:
                 fileHop.writelines(payload) 
 
+            if chk > 0:
+                payload = low
+            else:
+                payload = high
             #print(payload, end="")
 
-            sys.stdout.write(payload)
+                #COLOR MODE
+            #if a%2==0:
+            #    sys.stdout.write(f"{COLOR_ONE}"+payload)
+            #    sys.stdout.flush()
+            #else:
+            #    sys.stdout.write(f"{COLOR_TWO}"+payload)
+            #    sys.stdout.flush()
+
+                #DEFAULT COLORS
+            sys.stdout.write(f"{COLOR_ONE}"+payload)
             sys.stdout.flush()
 
         with open("picture.txt", "a") as fileHop:
