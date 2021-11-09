@@ -200,7 +200,7 @@ if __name__ == "__main__":
 
     a = image()
 
-    a.getFile()
+    a.rename()
 
 
 
